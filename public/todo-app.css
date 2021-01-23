@@ -1,0 +1,123 @@
+body {
+  max-width: 460px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.TodoPage {
+  font-family: "Open Sans";
+}
+
+.TodoPage__title {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 20px;
+  color: #453c52;
+  letter-spacing: 0.14px;
+  margin-bottom: 12px;
+}
+
+.AddTodo {
+  display: inline-flex;
+  margin-bottom: 24px;
+  height: 32px;
+}
+.AddTodo__input {
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 6px 12px;
+}
+.AddTodo__date {
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  border-radius: 4px;
+  margin-right: 11px;
+}
+.AddTodo__button {
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.1px;
+  background: #48bb78;
+  border-radius: 4px;
+  border-radius: 4px;
+  border: 0px;
+  padding: 6px 22px 7px 22px;
+}
+.TodoSection {
+  margin-left: 3px;
+  margin-bottom: 24px;
+}
+.TodoSection__title {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+.TodoSection__title__text {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 14px;
+  color: #453c52;
+  letter-spacing: 0.1px;
+}
+.TodoSection__title__remainingCount {
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: #453c52;
+  letter-spacing: 0.09px;
+  margin-left: 8px;
+}
+
+.TodoItem {
+  margin-bottom: 12px;
+  padding-left: 14px;
+}
+.TodoItem :hover {
+  background-color: #bfb8cc;
+}
+.TodoItem__container {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #453c52;
+  letter-spacing: 0.1px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+.TodoItem__checkbox {
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+.TodoItem__overdueLabel {
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: #c53030;
+  letter-spacing: 0.09px;
+  margin-left: 10px;
+}
+.TodoItem__dueDate {
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: #726a7e;
+  letter-spacing: 0.09px;
+  margin-left: 10px;
+}
+
+img {
+  visibility: hidden;
+  margin-left: 21px;
+  margin-right: 8px;
+}
+.TodoItem :hover img {
+  visibility: visible;
+}

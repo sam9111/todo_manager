@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     render plain: Users.order(:created_at).map { |user| user.to_pleasant_string }.join("\n")
   end
 
+  def show
+    render plain: Users.find(params[:id]).to_pleasant_string
+  end
+
   def create
     name = params[:name]
     email = params[:email]
