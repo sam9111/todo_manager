@@ -89,6 +89,9 @@ body {
   padding-top: 3px;
   padding-bottom: 4px;
 }
+.TodoItem__container-completed {
+  text-decoration: line-through;
+}
 .TodoItem__checkbox {
   background: #ffffff;
   border: 1px solid #bfb8cc;
@@ -113,13 +116,11 @@ body {
   margin-left: 10px;
 }
 
-img {
+.fa-trash {
   visibility: hidden;
   margin-left: 21px;
   margin-right: 8px;
-  width: 14px;
-  height: 16px;
 }
-.TodoItem :hover img {
+.TodoItem :hover .fa-trash {
   visibility: visible;
 }

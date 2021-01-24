@@ -2,7 +2,9 @@ class Todo < ActiveRecord::Base
   def due_today?
     due_date == Date.today
   end
-
+  def overdue_completed?
+    due_date < Date.today and completed
+  end
   def to_pleasant_string
     display_status = completed ? "[X]" : "[ ]"
     display_date = due_today? ? nil : due_date
