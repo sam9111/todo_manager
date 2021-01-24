@@ -117,6 +117,8 @@ img {
   visibility: hidden;
   margin-left: 21px;
   margin-right: 8px;
+  width: 14px;
+  height: 16px;
 }
 .TodoItem :hover img {
   visibility: visible;
