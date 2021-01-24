@@ -16,7 +16,9 @@
         <% if not todo.due_today? %>
         <p class="TodoItem__dueDate"><%= todo.due_date.to_s(:short) %></p>
         <% end %>
-        <i class="fa fa-trash" aria-hidden="true"></i>
+        <%= form_with(url: "/todos/#{todo.id}" ,method: "delete") do %>
+        <input type="image" src="/assets/delete.png" alt="Delete" width=14px height=14px>
+        <% end %>
       </div>
     </li>
     <% end %>

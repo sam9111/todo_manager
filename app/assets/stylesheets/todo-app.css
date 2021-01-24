@@ -116,11 +116,11 @@ body {
   margin-left: 10px;
 }
 
-.fa-trash {
+img {
   visibility: hidden;
   margin-left: 21px;
   margin-right: 8px;
 }
-.TodoItem :hover .fa-trash {
+.TodoItem :hover img {
   visibility: visible;
 }
