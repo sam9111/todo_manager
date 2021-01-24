@@ -74,7 +74,7 @@ body {
 
 .TodoItem {
   margin-bottom: 12px;
-  padding-left: 14px;
+  margin-left: 14px;
 }
 .TodoItem :hover {
   background-color: #bfb8cc;

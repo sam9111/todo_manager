@@ -8,14 +8,11 @@
     <% if not todo.overdue_completed? %>
     <li class="TodoItem">
       <div class="TodoItem__container">
-        <%  if todo.completed %>
-        <input class="TodoItem__checkbox" type="checkbox" value="1" checked />
-        <p class="TodoItem__container-completed "><%= todo.todo_text %></p>
-        <% else %>
-        <input class="TodoItem__checkbox" type="checkbox" value="2" />
-        <%= todo.todo_text %>
+        <%= form_with(url: "/todos/#{todo.id}" ,method: "put") do %>
+        <input class="TodoItem__checkbox" type="checkbox" name="completed" onclick="this.form.submit()"
+          <%= todo.completed ? "checked" : "" %> />
         <% end %>
-
+        <p class='<%= todo.completed ? "TodoItem__container-completed " : "" %>'><%= todo.todo_text %></p>
         <% if not todo.due_today? %>
         <p class="TodoItem__dueDate"><%= todo.due_date.to_s(:short) %></p>
         <% end %>
