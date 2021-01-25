@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     last_name = params[:last_name]
     email = params[:email]
     password = params[:password]
-    User.create!(first_name: first_name, last_name: last_name, email: email, password_digest: password)
+    User.create!(first_name: first_name, last_name: last_name, email: email, password: password)
     redirect_to root_path
   end
 
