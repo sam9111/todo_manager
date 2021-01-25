@@ -126,3 +126,38 @@ img {
 .TodoItem :hover img {
   visibility: visible;
 }
+
+.UsersNew {
+  font-family: "Open Sans";
+  font-weight: 600;
+}
+.NewUsers-title {
+  font-family: "Open Sans";
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+.Form-section {
+  margin-bottom: 30px;
+}
+
+.Form-input {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.FormInput-label {
+  color: #504b4b;
+  margin-bottom: 8px;
+}
+.Form-submit {
+  font-family: "Open Sans";
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 0.1px;
+  background: #0ad860;
+  border-radius: 4px;
+  border-radius: 4px;
+  border: 0px;
+  padding: 6px 22px 7px 22px;
+}

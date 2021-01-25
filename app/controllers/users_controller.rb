@@ -1,9 +1,11 @@
 # users_controller.rb
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  def new
+    render "users/new"
+  end
 
   def index
-    render plain: Users.order(:created_at).map { |user| user.to_pleasant_string }.join("\n")
+    render "index"
   end
 
   def show
@@ -11,11 +13,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    name = params[:name]
+    first_name = params[:first_name]
+    last_name = params[:last_name]
     email = params[:email]
     password = params[:password]
-    Users.create!(name: name, email: email, password: password)
-    render plain: "User with name '#{name}' was successfully created"
+    User.create!(first_name: first_name, last_name: last_name, email: email, password_digest: password)
+    redirect_to root_path
   end
 
   def login
