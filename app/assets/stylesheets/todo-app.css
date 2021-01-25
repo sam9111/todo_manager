@@ -35,7 +35,6 @@ body {
   border: 1px solid #bfb8cc;
   border-radius: 4px;
   border-radius: 4px;
-  margin-right: 11px;
 }
 .AddTodo__button {
   font-family: "Open Sans";
@@ -47,6 +46,7 @@ body {
   border-radius: 4px;
   border: 0px;
   padding: 6px 22px 7px 22px;
+  margin-left: 11px;
 }
 .TodoSection {
   margin-left: 3px;
@@ -120,6 +120,8 @@ img {
   visibility: hidden;
   margin-left: 21px;
   margin-right: 8px;
+  width: 14px;
+  height: 14px;
 }
 .TodoItem :hover img {
   visibility: visible;

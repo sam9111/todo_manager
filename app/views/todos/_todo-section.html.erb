@@ -9,15 +9,14 @@
     <li class="TodoItem">
       <div class="TodoItem__container">
         <%= form_with(url: "/todos/#{todo.id}" ,method: "put") do %>
-        <input class="TodoItem__checkbox" type="checkbox" name="completed" onclick="this.form.submit()"
-          <%= todo.completed ? "checked" : "" %> />
+        <%= check_box_tag(:completed,:completed,todo.completed,class: "TodoItem__checkbox" ,onclick: "this.form.submit()")%>
         <% end %>
         <p class='<%= todo.completed ? "TodoItem__container-completed " : "" %>'><%= todo.todo_text %></p>
         <% if not todo.due_today? %>
         <p class="TodoItem__dueDate"><%= todo.due_date.to_s(:short) %></p>
         <% end %>
         <%= form_with(url: "/todos/#{todo.id}" ,method: "delete") do %>
-        <input type="image" src="/assets/delete.png" alt="Delete" width=14px height=14px>
+        <%= image_submit_tag("/assets/delete.png",alt: "delete") %>
         <% end %>
       </div>
     </li>
