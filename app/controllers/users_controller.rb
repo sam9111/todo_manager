@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     email = params[:email]
     password = params[:password]
     User.create!(first_name: first_name, last_name: last_name, email: email, password: password)
-    redirect_to root_path
+    redirect_to new_sessions_path
   end
 
   def login
