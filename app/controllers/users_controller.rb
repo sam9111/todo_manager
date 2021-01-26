@@ -19,8 +19,9 @@ class UsersController < ApplicationController
     last_name = params[:last_name]
     email = params[:email]
     password = params[:password]
-    User.create!(first_name: first_name, last_name: last_name, email: email, password: password)
-    redirect_to new_sessions_path
+    user = User.create!(first_name: first_name, last_name: last_name, email: email, password: password)
+    session[:current_user_id] = user.id
+    redirect_to root_path
   end
 
   def login
