@@ -12,6 +12,8 @@
 }
 
 .UserHeader {
+  display: flex;
+  justify-content: space-between;
   font-family: "Open Sans";
   padding: 10px;
   background-color: lightgray;
